@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import PlaceholderImage from "./PlaceholderImage";
-import FullscreenViewer from "./FullscreenViewer";
 
 interface GalleryImage {
   label: string;
@@ -16,7 +14,6 @@ interface ImageGalleryProps {
 }
 
 const ImageGallery = ({ images, columns = 3 }: ImageGalleryProps) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const gridCols =
     columns === 2
@@ -25,62 +22,49 @@ const ImageGallery = ({ images, columns = 3 }: ImageGalleryProps) => {
       ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
       : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
 
-  const selected = selectedIndex !== null ? images[selectedIndex] : null;
-
   return (
-    <>
-      <div className={`grid ${gridCols} gap-6`}>
-        {images.map((img, i) => {
+    <div className={`grid ${gridCols} gap-6`}>
+      {images.map((img, i) => {
 
-          // NAVIGATION CARD
-          if (img.link) {
-            return (
-              <Link key={i} to={img.link} className="block">
-                <div className="overflow-hidden rounded-sm border border-border hover:shadow-lg transition">
-                  <PlaceholderImage label={img.label} aspectRatio="4/3" />
-                  <p className="text-sm font-body text-center py-3">
-                    {img.label}
-                  </p>
-                </div>
-              </Link>
-            );
-          }
+        const content = (
+          <div className="overflow-hidden rounded-sm border border-border hover:shadow-md transition">
+            
+            {img.src ? (
+              <img
+                src={img.src}
+                alt={img.label}
+                className="w-full object-cover"
+                style={{ aspectRatio: img.aspectRatio || "4/3" }}
+              />
+            ) : (
+              <PlaceholderImage
+                label={img.label}
+                aspectRatio={img.aspectRatio || "4/3"}
+              />
+            )}
 
-          // IMAGE PREVIEW CARD
+            <p className="text-sm font-body text-center py-3">
+              {img.label}
+            </p>
+
+          </div>
+        );
+
+        if (img.link) {
           return (
-            <div
-              key={i}
-              className="cursor-pointer overflow-hidden rounded-sm border border-border hover:shadow-lg transition"
-              onClick={() => setSelectedIndex(i)}
-            >
-              {img.src ? (
-                <img
-                  src={img.src}
-                  alt={img.label}
-                  className="w-full object-cover"
-                  style={{ aspectRatio: img.aspectRatio || "4/3" }}
-                />
-              ) : (
-                <PlaceholderImage
-                  label={img.label}
-                  aspectRatio={img.aspectRatio || "4/3"}
-                />
-              )}
-
-              <p className="text-sm font-body text-center py-3">
-                {img.label}
-              </p>
-            </div>
+            <Link key={i} to={img.link}>
+              {content}
+            </Link>
           );
-        })}
-      </div>
+        }
 
-      <FullscreenViewer
-        label={selected?.label ?? null}
-        src={selected?.src}
-        onClose={() => setSelectedIndex(null)}
-      />
-    </>
+        return (
+          <div key={i}>
+            {content}
+          </div>
+        );
+      })}
+    </div>
   );
 };
 
