@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
 import drawingArea from "@/assets/drawing-area-1.png";
+import flooring from "@/assets/flooring_autocad.jpeg"; 
 
 const projects = [
   {
@@ -12,6 +13,7 @@ const projects = [
   {
     title: "Restaurant Interior Design",
     slug: "restaurant-interior",
+    image: flooring,
   },
 ];
 
