@@ -23,7 +23,7 @@ import masterBedroom2 from "@/assets/master-bedroom-2.png";
 import masterBedroom3 from "@/assets/master-bedroom-3.png";
 import walkIn1 from "@/assets/walk-in-wardrobe-1.png";
 import walkIn2 from "@/assets/walk-in-wardrobe-2.png";
-import walkIn3 from "@/assets/walk-in-wardrobe-3.jpg";
+import walkIn3 from "@/assets/walk-in-wardrobe-3.jpeg";
 
 import pooja1 from "@/assets/pooja-cabinet-1.png";
 
