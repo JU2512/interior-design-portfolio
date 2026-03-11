@@ -56,15 +56,15 @@ const autocadDrawings = [
 /* 3D VISUALIZATIONS */
 
 const spaces = [
-  { title: "Living Room", slug: "living-room", image: livingRoom },
   { title: "Drawing Area", slug: "drawing-area", image: drawingArea },
-  { title: "Dining Area", slug: "dining-area", image: diningArea },
+  { title: "Pooja Unit", slug: "pooja-cabinet", image: pooja },
+  { title: "Living Area", slug: "living-room", image: livingRoom },
   { title: "Kitchen", slug: "kitchen", image: kitchen },
-  { title: "Kids Bedroom", slug: "kids-bedroom", image: kidsBedroom },
-  { title: "Parents Bedroom", slug: "parents-bedroom", image: parentsBedroom },
+  { title: "Dining Area", slug: "dining-area", image: diningArea },
   { title: "Master Bedroom", slug: "master-bedroom", image: masterBedroom },
   { title: "Walk-in Wardrobe", slug: "walk-in-wardrobe", image: walkin },
-  { title: "Pooja Cabinet", slug: "pooja-cabinet", image: pooja },
+  { title: "Parents Bedroom", slug: "parents-bedroom", image: parentsBedroom },
+  { title: "Kids Bedroom", slug: "kids-bedroom", image: kidsBedroom },
 ];
 
 
@@ -86,7 +86,7 @@ const DuplexResidence = () => {
           </p>
 
           <p className="font-body text-xs text-muted-foreground mb-10">
-            AutoCAD · SketchUp · V-Ray · 3Ds Max
+            AutoCAD · SketchUp · V-Ray 
           </p>
         </FadeIn>
 

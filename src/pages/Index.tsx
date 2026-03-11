@@ -11,11 +11,14 @@ const Index = () => {
       {/* Hero */}
       <section className="relative w-full h-screen">
         <img src={heroImage} alt="Modern contemporary interior design render" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15))' }} />
+        <div
+  className="absolute inset-0"
+  style={{ background: "linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05))" }}
+/>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-6">
             <FadeIn>
-              <h1 className="font-heading text-4xl md:text-6xl font-semibold mb-3" style={{ color: '#4f4f4d', letterSpacing: '2px' }}>Deepak Urade</h1>
+              <h1 className="font-heading text-4xl md:text-6xl font-semibold mb-3" style={{ color: '#AF6E4D', letterSpacing: '2px' }}>Deepak Urade</h1>
               <p className="font-body text-lg md:text-xl text-white mb-4" style={{ textShadow: '0px 4px 18px rgba(0,0,0,0.35)' }}>Interior Design Portfolio</p>
               <p className="font-body text-sm md:text-base text-white/70 max-w-md mx-auto" style={{ textShadow: '0px 4px 18px rgba(0,0,0,0.35)' }}>Creating functional spaces through modern and thoughtful interior design.</p>
             </FadeIn>
