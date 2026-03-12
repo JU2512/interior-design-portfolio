@@ -109,7 +109,7 @@ const DuplexResidence = () => {
 
         <FadeIn delay={150}>
           <h2 className="font-heading text-2xl text-foreground mb-6">
-            Concept
+            Moodboard
           </h2>
 
           <img
