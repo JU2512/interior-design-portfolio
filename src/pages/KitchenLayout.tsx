@@ -1,11 +1,15 @@
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
-import PlaceholderImage from "@/components/PlaceholderImage";
+
+import kitchenLayout1 from "@/assets/KitchenLayout1.jpeg";
+import kitchenLayout2 from "@/assets/KitchenLayout2.jpeg";
 
 const KitchenLayout = () => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+
+        {/* Title */}
 
         <FadeIn>
           <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-12">
@@ -13,27 +17,23 @@ const KitchenLayout = () => {
           </h1>
         </FadeIn>
 
-        <FadeIn delay={100}>
-          <h2 className="font-body text-lg text-muted-foreground mb-4">
-            Kitchen Planning Layout
-          </h2>
+        {/* Main Kitchen Drawing */}
 
-          <PlaceholderImage
-            label="Kitchen Layout"
-            aspectRatio="16/9"
-            className="rounded-md mb-16"
+        <FadeIn delay={100}>
+          <img
+            src={kitchenLayout1}
+            alt="Kitchen Layout Plan and Elevations"
+            className="w-full rounded-sm mb-16"
           />
         </FadeIn>
 
-        <FadeIn delay={200}>
-          <h2 className="font-body text-lg text-muted-foreground mb-4">
-            Cabinet Layout
-          </h2>
+        {/* Furniture Details */}
 
-          <PlaceholderImage
-            label="Kitchen Cabinet Detail"
-            aspectRatio="16/9"
-            className="rounded-md"
+        <FadeIn delay={200}>
+          <img
+            src={kitchenLayout2}
+            alt="Kitchen Furniture Detail"
+            className="w-full rounded-sm"
           />
         </FadeIn>
 

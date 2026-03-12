@@ -24,6 +24,7 @@ import zoning1 from "@/assets/zoning1.png";
 import furniture1 from "@/assets/furniture1.png";
 import ceiling1 from "@/assets/ceiling1.png";
 import lighting1 from "@/assets/lighting1.png";
+import kitchenLayoutPreview from "@/assets/KitchenLayout1.jpeg";
 
 
 /* AUTOCAD DRAWINGS */
@@ -49,8 +50,12 @@ const autocadDrawings = [
     slug: "lighting-layout",
     image: lighting1,
   },
+  {
+    title: "Kitchen Layout",
+    slug: "kitchen-layout",
+    image: kitchenLayoutPreview,
+  },
 ];
-
 
 
 /* 3D VISUALIZATIONS */

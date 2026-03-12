@@ -9,7 +9,6 @@ const softwareSkills = [
   { name: "SketchUp", logo: sketchupLogo },
   { name: "3Ds Max", logo: "https://img.icons8.com/color/96/3ds-max.png" },
   { name: "V-Ray", logo: vrayLogo },
-  { name: "Adobe Photoshop", logo: "https://img.icons8.com/color/96/adobe-photoshop--v1.png" },
 ];
 
 const About = () => {
