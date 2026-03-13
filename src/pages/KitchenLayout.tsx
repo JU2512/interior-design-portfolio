@@ -13,7 +13,7 @@ const KitchenLayout = () => {
 
         <FadeIn>
           <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-12">
-            Kitchen Layout
+            2d Orthographic Projection of Kitchen
           </h1>
         </FadeIn>
 
